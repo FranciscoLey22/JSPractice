@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Movies App</title>
+	</head>
+	<body>
+		<div class="mainHeading">
+			<h1>Movies App</h1>
+			<form action="input" id="movieApp">
+				Title <input type="text" id="title" minlength="2" />
+				<br />
+				Rating <input type="number" id="rating" min="0" step="1" max="10" />
+				<br />
+				<br />
+				<input type="submit" placeholder="Submit" />
+			</form>
+		</div>
+		<br />
+	</body>
+	<script
+		src="https://code.jquery.com/jquery-3.6.2.js"
+		integrity="sha256-pkn2CUZmheSeyssYw3vMp1+xyub4m+e+QK4sQskvuo4="
+		crossorigin="anonymous"
+	></script>
+
+	<script >
+$("div").css("background-color", "lightblue");
+
+
+
+$("form").on("submit", function(e){
+    e.preventDefault();
+    let title = $("#title").val();
+    let rating = $("#rating").val(); 
+   
+    $("div").append(`<table>
+    <thead>
+        <tr>
+            <th colspan="2">${title}</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Rating</td>
+            <td>${rating}</td>
+            <td><button id="button">
+            Delete
+          </button></td>
+        </tr>
+    </tbody>
+</table>`);
+    });
+
+    $("table").on("click", "#button", function(evt) {
+        // find the index where this movie is
+          
+        // remove it from the DOM
+        $(evt.target)
+          .closest("table")
+          .remove();
+        
+      });
+	
+	</script>
+</html>
