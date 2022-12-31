@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Giphy Party!</title>
+		<link
+			rel="stylesheet"
+			href="https://bootswatch.com/4/darkly/bootstrap.min.css"
+		/>
+	</head>
+
+	<body>
+		<h1>Giphy Party</h1>
+
+		<form action="" id="searchform">
+			<label for="kw">Keywords for gif...</label>
+			<input type="text" id="kw" name="kw" placeholder="KWs" />
+			<input
+				type="submit"
+				id="btn"
+				value="Show me gifs!!"
+				class="btn btn-primary"
+			/>
+			<button id="delete" class="btn btn-danger">Delete Images</button>
+		</form>
+		<div id="gifsGoHere" class="row">
+			<img src="" id="gif" />
+		</div>
+
+		<br />
+		<!-- <img src="https://media0.giphy.com/media/d3mlE7uhX8KFgEmY/200w.webp?cid=ecf05e478ecyc8qytnqaeotxebnferld02hr6u10h2cqcilf&rid=200w.webp&ct=g" alt="" id="gif"> -->
+		<script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+		<script src="https://unpkg.com/axios/dist/axios.js"></script>
+		<script src="giphy.js"></script>
+	</body>
+</html>
